@@ -8,7 +8,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#000",
-        "navigationBarTitleText": "积云扫码购",
+        "navigationBarTitleText": "扫码购",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {

@@ -1,0 +1,27 @@
+.main{
+  flex : 1;
+  display: flex;
+  justify-content: center;
+}
+.main .qrcode-button{
+  flex-direction: column;
+  width: 320rpx;
+  height: 320rpx;
+  background-color: #fcaf18;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+  border:10px solid #fde5aa;
+}
+.main .qrcode-button image{
+  width: 180rpx;
+  height: 160rpx;
+}
+.main .qrcode-button text{
+  color: #fff;
+  margin-top: 5px;
+  width: 180rpx;
+  text-align: center;
+}
