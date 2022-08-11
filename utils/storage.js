@@ -2,8 +2,6 @@ import {field} from '../config/config'
 class Storage {
   /**
    * 设置本地存储的数据
-   * @param {*} key 
-   * @param {*} value 
    */
   static set(key,value){
     wx.setStorageSync(key, value)
@@ -11,7 +9,6 @@ class Storage {
 
   /**
    * 获取本地存储的数据
-   * @param {*} key 
    */
   static get(key){
     return wx.getStorageSync(key)
@@ -19,7 +16,6 @@ class Storage {
 
   /**
    * 删除本地存储的数据
-   * @param {*} key 
    */
   static remove(key){
     wx.removeStorageSync()

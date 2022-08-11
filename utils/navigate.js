@@ -19,7 +19,7 @@ export const navigateAuthTo = (url) => {
     wx.navigateTo({
       url,
     })
-    return
+    return   
   }
   //获取token
  const token = wx.getStorageSync(field.loginCredentials)
