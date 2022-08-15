@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="main">
+    <view class="list">
+      <view class="list-item" wx:for="{{carts}}" wx:key="index">
+        <view class="title">
+          <text>{{item.title}}</text>
+          <text>¥{{item.price}}</text>
+        </view>
+        <view class="count">
+          X<text>{{item.num}}</text>
+        </view>
+      </view>
+      <view class="list-button" bindtap="handleToggleShop">
+        共{{len}}件商品 {{len === carts.length ? '收起' : '展开'}} 
+      </view>
+    </view>
+    <view class="item">
+      <text>余额 <text class="price">(¥{{balance}})</text></text>
+      <switch bindchange="handleSwitch" color="#FEBE1B"></switch>
+    </view>
+    <view class="item">
+      <text>商品金额</text>
+      <text class="price">¥{{totalPrice}}</text>
+    </view>
+    <view class="item">
+      <text>余额减扣</text>
+      <text class="price">-¥{{flag ? currentBalance : 0}}</text>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="price-pay">
+      实际支付: <text class="price"> ¥ {{currentPrice}}</text>
+    </view>
+    <view class="confirm-pay" bindtap="handleGoSuccess">确认支付</view>
+  </view> 
+</view>

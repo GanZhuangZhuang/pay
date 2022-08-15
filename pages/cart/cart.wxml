@@ -1,13 +1,13 @@
-<view class="container">
+<view class="container" wx:if="{{cartList.length > 0}}">
   <view class="list">
     <view class="list-item" wx:for="{{cartList}}" wx:key="index">
       <view class="list-item-title">{{item.title}}</view>
       <view class="list-item-sku">规格: 500ml/瓶</view>
       <view class="list-item-price">¥{{item.price}}</view>
       <view class="list-item-button-group">
-        <view class="decrement"  data-index="{{index}}"  bindtap="handleDecrement">-</view>
+        <view class="decrement" data-index="{{index}}" bindtap="handleDecrement">-</view>
         <input type="text" class="count" value="{{item.num}}"/>
-        <view class="increment"  data-index="{{index}}" bindtap="handleIncrement">+</view>
+        <view class="increment" data-index="{{index}}"  bindtap="handleIncrement">+</view>
       </view>
     </view>
   </view>
@@ -18,7 +18,15 @@
     </view>
     <view class="button-group">
       <view class="add" bindtap="handleAdd">继续添加</view>
-      <view class="settle">去结算({{cartList.length}})</view>
+      <view class="settle" bindtap="handleGoOrder">去结算({{cartList.length}})</view>
     </view>
   </view>
+</view>
+
+<view class="container empty-cart" wx:else="">
+ <text class="tips">购物车是空的哦~</text>
+ <image class="cart-image" src="../../assets/images/cart.png"></image>
+ <view class="sancode" bindtap="handleAdd">
+  扫一扫条形码
+ </view>
 </view>

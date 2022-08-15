@@ -19,16 +19,14 @@ class ShopModel extends Http{
    */
   static getShopingInfo(qcode){
     return Http.request({
-      url:'/api/getProduct',
-      method:"GET",
-      data:{
+      url : '/api/getProduct',
+      method : "GET",
+      data : {
         qcode
       },
-      name:'api2'
+      name : 'api2'
     })
   }
 }
 
-
-
-export default  ShopModel
+export default ShopModel

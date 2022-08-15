@@ -4,9 +4,12 @@ page{
 }
 .container{
   height : 100%;
-  background-color: #f7f7f6;
+  background-color: #fbfbfb;
 }
 image{
   width: 100%;
   height: 100%;
+}
+.price{
+  color : #f60;
 }
